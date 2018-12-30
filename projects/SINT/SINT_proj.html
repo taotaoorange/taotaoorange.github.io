@@ -1,0 +1,145 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Siamese Instance Search for Tracking">
+    <meta name="author" content="Ran Tao, Efstratios Gavves, Arnold Smeulders">
+
+    <title>Siamese Instance Search for Tracking</title>
+   
+    <link href="style.css" rel="stylesheet">
+
+   </head>
+
+  <body>
+
+    <div class="container">
+      <div class="header">
+        <h2 class="text" align="center"><span style="font-weight:bold">Siamese Instance Search for Tracking <i>(SINT)</i></span></h2>
+
+      </div>
+
+      <div align="center">
+        <a href="https://staff.fnwi.uva.nl/r.tao/"><b>Ran Tao</b></a>, <a href="http://www.egavves.com/"><b>Efstratios Gavves</b></a>, <a href="https://staff.fnwi.uva.nl/a.w.m.smeulders/"><b>Arnold Smeulders</b></a>
+      </div>
+
+      <div>&nbsp;</div>
+
+      <div align="center"><a href="https://ivi.fnwi.uva.nl/quva/">QUVA Lab, University of Amsterdam</a></div>
+
+      <div>&nbsp;</div>     
+
+
+      <div class="row">
+        <h3>Abstract</h3>
+        <p style="text-align: justify;">
+          In this paper we present a tracker, which is radically different from state-of-the-art trackers: we apply no model updating, no occlusion detection, no combination of trackers, no geometric matching, and still deliver state-of-the-art tracking performance, as demonstrated on the popular online tracking benchmark (OTB) and six very challenging YouTube videos. The presented tracker simply matches the initial patch of the target in the first frame with candidates in a new frame and returns the most similar patch by a learned matching function. The strength of the matching function comes from being extensively trained generically, <i>i.e.</i>, without any data of the target, using a Siamese deep neural network, which we design for tracking. Once learned, the matching function is used as is, without any adapting, to track previously unseen targets. It turns out that the learned matching function is so powerful that a simple tracker built upon it, coined Siamese INstance search Tracker, <i>SINT</i>, which only uses the original observation of the target from the first frame, suffices to reach state-of-the-art performance. Further, we show the proposed tracker even allows for target re-identification after the target was absent for a complete video shot.    
+        </p>
+        
+        <div>&nbsp;</div> 
+        <div align="center"><img src="overview.png" width="860"></div>
+      </div>
+
+      <div>&nbsp;</div>  
+
+      <div class="row">
+        <h3>Paper</h3>
+        <p><a href="https://staff.science.uva.nl/r.tao/pub/TaoCVPR2016.pdf">CVPR 2016 Paper</a> </p>
+
+       
+        <pre style="background-color:lightgrey;"><tt>@inproceedings{tao2016sint,
+        title={Siamese Instance Search for Tracking},
+        author={Tao, Ran and Gavves, Efstratios and Smeulders, Arnold W M},
+        booktitle={Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition},
+        year={2016}
+}</tt></pre>
+      </div>
+
+
+      <div>&nbsp;</div> 
+      <div>&nbsp;</div> 
+      <div>
+        <h3>Performance on OTB (51 sequences)</h3>
+        <div align="center"><img src="OTB_eval.png" title="In spite of the fact that the online part of the proposed SINT is just selecting the patch that matches best to the target in the first frame, SINT is on par with state-of-the-art tracker. SINT+, using a better candidate sampling than SINT and optical flow as an additional component, achieves the best performance." width="800"></div>
+        <p>In spite of the fact that the online part of the proposed SINT is just selecting the patch that matches best to the target in the first frame, SINT is on par with state-of-the-art trackers. SINT+, using a better candidate sampling than SINT and optical flow as an additional component, achieves the best performance.</p>
+      </div> 
+
+
+      <div>&nbsp;</div>
+      <div>&nbsp;</div> 
+      <div>
+        <h3>Performance on six additional challenging sequences</h3>
+        <table border="1" align="center" width="480">
+        <tr> <p align="center">Comparison with MEEM and MUSTer in AUC score</p>
+        <col width=120> 
+        <col width=120>
+        <col width=120>
+        <col width=120>
+        <tr><th><th>MEEM (Zhang et al, ECCV14)<th>MUSTer (Hong et al, CVPR15)<th> SINT (ours) 
+        <tr>
+        <tr bgcolor="FFFfFF" align="right"> <th> Fishing  <td> 4.3% <td> 11.2% <td> 53.7%
+        <tr bgcolor="FFfFff"align="right"> <th> Rally  <td> 20.4% <td> 27.5% <td> 53.4%
+        <tr bgcolor="FFFfFF"align="right"> <th> BirdAttack<td> 40.7% <td> 50.2%  <td>66.7%
+        <tr bgcolor="FFfFff"align="right"> <th> Soccer  <td> 36.9% <td> 48.0% <td> 72.5%
+        <tr bgcolor="FfFFFF"align="right"> <th> GD <td> 13.8% <td> 34.9% <td> 35.8%
+        <tr bgcolor="FfFFff"align="right"> <th> Dancing <td> 60.3% <td> 54.7% <td> 66.8%
+        <tr>
+        <tr bgcolor="ffffff" align="right"> <th> mean <td> 29.4% <td> 37.8% <td> 58.1%           
+        </table>
+        
+        <div>&nbsp;</div>
+        <table  border="0" align="center" width="880">
+        <tr> <th> <iframe width="400" height="225" src="https://www.youtube.com/embed/K-70sLC6gRU" frameborder="0" allowfullscreen></iframe> <th> <iframe width="400" height="225" src="https://www.youtube.com/embed/QiCDDQTGcn4" frameborder="0" allowfullscreen></iframe>
+        <tr> <th> <iframe width="400" height="225" src="https://www.youtube.com/embed/r3SgEuuUhDY" frameborder="0" allowfullscreen></iframe> <th> <iframe width="400" height="225" src="https://www.youtube.com/embed/1GYzl79iXtk" frameborder="0" allowfullscreen></iframe>
+        <tr> <th> <iframe width="400" height="225" src="https://www.youtube.com/embed/gWWHmSCgSno" frameborder="0" allowfullscreen></iframe> <th> <iframe width="400" height="225" src="https://www.youtube.com/embed/oMG1pJZSno0" frameborder="0" allowfullscreen></iframe>
+        </table>
+
+      </div>
+
+      <div>&nbsp;</div>
+      <div>&nbsp;</div> 
+      <div>
+        <h3>Target Re-identification</h3>
+        <p>In the absent of any drifting, SINT allows for target re-identification after the target was absent for a long period of time, provided with a sampling over the whole image.</p>
+        <div align="center"><iframe width="600" height="400" src="https://www.youtube.com/embed/knaxUljyY_Q" frameborder="0" allowfullscreen></iframe></div>
+      </div>
+
+
+      <div>&nbsp;</div> 
+      <div>&nbsp;</div> 
+      <div class="row">
+        <h3>Code, model and result files</h3>
+        <ul>
+        <li><a href="http://isis-data.science.uva.nl/rantao/SINT_similarity.caffemodel">caffe model</a>, <a href="SINT_deploy.prototxt">deploy prototxt</a>, <a href="SINT_train.prototxt">train prototxt</a></li>
+        <li><a href="eval_OTB.py">evaluation code on OTB</a></li>
+        <li><a href="SINT_result_files_noflow.zip">result files on OTB without optical flow (OPE)</a>, <a href="SINT_result_files_withflow.zip">result files on OTB with optical flow (OPE)</a>, <a href="SINT_result_files_SRE_noflow.zip">result files on OTB without optical flow (SRE)</a>, <a href="SINT_result_files_TRE_noflow.zip">result files on OTB without optical flow (TRE)</a></li>
+	<li><a href="normalization_layer.zip">L2 normalization layer</a>, <a href="https://github.com/rbgirshick/caffe-fast-rcnn/blob/bcd9b4eadc7d8fbc433aeefd564e82ec63aaf69c/src/caffe/layers/roi_pooling_layer.cu">ROIPooling</a></li>
+        <li><a href="scripts_prepare_training_data.zip">scripts for preparing training data</a></li>      
+        <li><a href="SINT_result_files_withflow_OTB2015.zip">result files on OTB2015</a></li> 
+ 
+        </ul>
+      </div>
+
+     
+      <div>&nbsp;</div> 
+      <div class="row">
+        <h3>Contact</h3>
+        <p>r.tao <i>at</i> uva.nl </p>
+      </div>
+
+
+    
+      <div>&nbsp;</div> 
+      <div class="row">
+        <h3>Copyright Notice</h3>
+        <p>The documents contained in these directories are included by the contributing authors as a means to ensure timely dissemination of scholarly and technical work on a non-commercial basis. Copyright and all rights therein are maintained by the authors or by other copyright holders, notwithstanding that they have offered their works here electronically. It is understood that all persons copying this information will adhere to the terms and constraints invoked by each author's copyright.</p>
+      </div>
+      
+    </div> <!-- /container -->
+
+
+  </body>
+</html>
+

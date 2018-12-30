@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Publications on Ran Tao</title>
+    <link>https://taotaoorange.github.io/publication/</link>
+    <description>Recent content in Publications on Ran Tao</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2018 Ran Tao</copyright>
+    <lastBuildDate>Sun, 01 Jan 2017 00:00:00 +0100</lastBuildDate>
+    
+	<atom:link href="https://taotaoorange.github.io/publication/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Long-term Tracking in the Wild: A Benchmark</title>
+      <link>https://taotaoorange.github.io/publication/oxuva/</link>
+      <pubDate>Sat, 08 Sep 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://taotaoorange.github.io/publication/oxuva/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Estimating small differences in car-pose from orbits</title>
+      <link>https://taotaoorange.github.io/publication/orbits/</link>
+      <pubDate>Mon, 03 Sep 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://taotaoorange.github.io/publication/orbits/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Tracking for Half an Hour</title>
+      <link>https://taotaoorange.github.io/publication/tracking-hah/</link>
+      <pubDate>Tue, 28 Nov 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://taotaoorange.github.io/publication/tracking-hah/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Tracking by Natural Language Specification</title>
+      <link>https://taotaoorange.github.io/publication/lang-tracker/</link>
+      <pubDate>Fri, 21 Jul 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://taotaoorange.github.io/publication/lang-tracker/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Words Matter: Scene Text for Image Classification and Retrieval</title>
+      <link>https://taotaoorange.github.io/publication/words-matter/</link>
+      <pubDate>Mon, 12 Dec 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://taotaoorange.github.io/publication/words-matter/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Siamese Instance Search for Tracking</title>
+      <link>https://taotaoorange.github.io/publication/sint/</link>
+      <pubDate>Sun, 26 Jun 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://taotaoorange.github.io/publication/sint/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Attributes and Categories for Generic Instance Search from One Example</title>
+      <link>https://taotaoorange.github.io/publication/attr-ins/</link>
+      <pubDate>Mon, 08 Jun 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://taotaoorange.github.io/publication/attr-ins/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Locality in Generic Instance Search from One Example</title>
+      <link>https://taotaoorange.github.io/publication/locality-ins/</link>
+      <pubDate>Tue, 24 Jun 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://taotaoorange.github.io/publication/locality-ins/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
